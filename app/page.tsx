@@ -10,7 +10,7 @@ export default function Home() {
     {
       role: "assistant",
       content:
-        "Hello! Ask me legal questions about immigration to the Netherlands.",
+        "Hello! Ask me questions about Me and Desired Solutions consulting.",
     },
   ]);
   const lastMessageRef = useRef<HTMLDivElement | null>(null);
@@ -58,15 +58,16 @@ export default function Home() {
       lastMessageRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [history]);
-
+    
+  {/* url('/images/bg.png'); src="images/assistant-avatar.png" */}
   return (
     <main className="h-screen bg-white p-6 flex flex-col">
       <div className="flex flex-col gap-8 w-full items-center flex-grow max-h-full">
         <h1 className=" text-4xl text-transparent font-extralight bg-clip-text bg-gradient-to-r from-violet-800 to-fuchsia-500">
-          IND chat
+          Hey, I'm Désiré. How can I help?
         </h1>
         <form
-          className="rounded-2xl border-purple-700 border-opacity-5  border lg:w-3/4 flex-grow flex flex-col bg-[url('/images/bg.png')] bg-cover max-h-full overflow-clip"
+          className="rounded-2xl border-purple-700 border-opacity-5  border lg:w-3/4 flex-grow flex flex-col bg-[url('https://img1.wsimg.com/isteam/videos/jajB2l1')] bg-cover max-h-full overflow-clip"
           onSubmit={(e) => {
             e.preventDefault();
             handleClick();
@@ -84,12 +85,12 @@ export default function Home() {
                       className="flex gap-2"
                     >
                       <img
-                        src="images/assistant-avatar.png"
+                        src="https://raw.githubusercontent.com/dnzengou/my-online-resume/dev/img/favicons/android-chrome-192x192.png"
                         className="h-12 w-12 rounded-full"
                       />
                       <div className="w-auto max-w-xl break-words bg-white rounded-b-xl rounded-tr-xl text-black p-6 shadow-[0_10px_40px_0px_rgba(0,0,0,0.15)]">
                         <p className="text-sm font-medium text-violet-500 mb-2">
-                          AI assistant
+                          Dez AI
                         </p>
                         {message.content}
                         {message.links && (
@@ -129,15 +130,16 @@ export default function Home() {
                   );
               }
             })}
+              {/* images/assistant-avatar.png*/}
             {loading && (
               <div ref={lastMessageRef} className="flex gap-2">
                 <img
-                  src="images/assistant-avatar.png"
+                  src="https://raw.githubusercontent.com/dnzengou/my-online-resume/dev/img/favicons/android-chrome-192x192.png"
                   className="h-12 w-12 rounded-full"
                 />
                 <div className="w-auto max-w-xl break-words bg-white rounded-b-xl rounded-tr-xl text-black p-6 shadow-[0_10px_40px_0px_rgba(0,0,0,0.15)]">
                   <p className="text-sm font-medium text-violet-500 mb-4">
-                    AI assistant
+                    Dez AI
                   </p>
                   <LoadingDots />
                 </div>

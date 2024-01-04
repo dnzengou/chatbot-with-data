@@ -5,8 +5,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "IND chat",
-  description: "Chatbot with custom knowledge base",
+  title: "Dez AI",
+  description: "ChatGPT-like bot with custom knowledge base and retrival agent",
 };
 
 export default function RootLayout({
